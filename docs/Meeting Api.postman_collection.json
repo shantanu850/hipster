@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "5af608d4-9bec-4750-9bec-c8552d2088d1",
+		"name": "Meeting Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19749647",
+		"_collection_link": "https://grey-flare-31227.postman.co/workspace/Shared-App~e2989790-f525-489c-8160-4b8cec539f29/collection/19749647-5af608d4-9bec-4750-9bec-c8552d2088d1?action=share&source=collection_link&creator=19749647"
+	},
+	"item": [
+		{
+			"name": "Meeting Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "rlN5zr6YKn1MKvqCJu8s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/meetings?type=agent",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"meetings"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "agent"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Meeting Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "adsfnsdkjfnkjwenfkjj",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/meetings?type=agent",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"meetings"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "agent"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Meeting created successfully\",\n    \"data\": {\n        \"meeting\": {\n            \"MeetingId\": \"2403a754-44a8-4add-bde8-6614d9312954\",\n            \"ExternalMeetingId\": \"2341\",\n            \"MediaRegion\": \"ap-southeast-1\",\n            \"MediaPlacement\": {\n                \"AudioHostUrl\": \"123954fe73499a8c1d799ba659b436f2.k.m1.as1.app.chime.aws:3478\",\n                \"AudioFallbackUrl\": \"wss://wss.k.m1.as1.app.chime.aws:443/calls/2403a754-44a8-4add-bde8-6614d9312954\",\n                \"SignalingUrl\": \"wss://signal.m1.as1.app.chime.aws/control/2403a754-44a8-4add-bde8-6614d9312954\",\n                \"TurnControlUrl\": \"https://2954.cell.ap-southeast-1.meetings.chime.aws/v2/turn_sessions\",\n                \"ScreenDataUrl\": \"wss://bitpw.m1.as1.app.chime.aws:443/v2/screen/2403a754-44a8-4add-bde8-6614d9312954\",\n                \"ScreenViewingUrl\": \"wss://bitpw.m1.as1.app.chime.aws:443/ws/connect?passcode=null&viewer_uuid=null&X-BitHub-Call-Id=2403a754-44a8-4add-bde8-6614d9312954\",\n                \"ScreenSharingUrl\": \"wss://bitpw.m1.as1.app.chime.aws:443/v2/screen/2403a754-44a8-4add-bde8-6614d9312954\",\n                \"EventIngestionUrl\": \"https://data.svc.as1.ingest.chime.aws/v1/client-events\"\n            },\n            \"MeetingFeatures\": {\n                \"Audio\": {\n                    \"EchoReduction\": \"UNAVAILABLE\"\n                }\n            },\n            \"TenantIds\": [],\n            \"MeetingArn\": \"arn:aws:chime:ap-southeast-1:490864477453:meeting/2403a754-44a8-4add-bde8-6614d9312954\"\n        },\n        \"attendee\": {\n            \"ExternalUserId\": \"agent\",\n            \"AttendeeId\": \"2b680e14-9532-980c-3dfe-5d29ccf08b79\",\n            \"JoinToken\": \"MmI2ODBlMTQtOTUzMi05ODBjLTNkZmUtNWQyOWNjZjA4Yjc5OjA3OWJlNjk4LTgyZmMtNDg3MS1hZjBlLWY0ODJhNTNlYmVkYQ\",\n            \"Capabilities\": {\n                \"Audio\": \"SendReceive\",\n                \"Video\": \"SendReceive\",\n                \"Content\": \"SendReceive\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Client Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "rlN5zr6YKn1MKvqCJu8s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/meetings?type=client&meeting_id=b3b0658c-92f8-4c22-ac61-9f8df5ad2954",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"meetings"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "client"
+						},
+						{
+							"key": "meeting_id",
+							"value": "b3b0658c-92f8-4c22-ac61-9f8df5ad2954"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Client Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "adsfnsdkjfnkjwenfkjj",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/meetings?type=client&meeting_id=2403a754-44a8-4add-bde8-6614d9312954",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"meetings"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "client"
+								},
+								{
+									"key": "meeting_id",
+									"value": "2403a754-44a8-4add-bde8-6614d9312954"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"client token retrieved successfully \",\n    \"data\": {\n        \"meeting\": {\n            \"MeetingId\": \"2403a754-44a8-4add-bde8-6614d9312954\"\n        },\n        \"attendee\": {\n            \"ExternalUserId\": \"client\",\n            \"AttendeeId\": \"606d7bdc-c5f1-6167-1f2f-c15452a6e2c7\",\n            \"JoinToken\": \"NjA2ZDdiZGMtYzVmMS02MTY3LTFmMmYtYzE1NDUyYTZlMmM3OmEwZDVkM2E2LTk5OGYtNGVkMC1hMjhmLTFhN2YxZDkzZDdjOA\",\n            \"Capabilities\": {\n                \"Audio\": \"SendReceive\",\n                \"Video\": \"SendReceive\",\n                \"Content\": \"SendReceive\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Agent Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "rlN5zr6YKn1MKvqCJu8s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/meetings?type=agent&meeting_id=b3b0658c-92f8-4c22-ac61-9f8df5ad2954",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"meetings"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "agent"
+						},
+						{
+							"key": "meeting_id",
+							"value": "b3b0658c-92f8-4c22-ac61-9f8df5ad2954"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Agent Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "rlN5zr6YKn1MKvqCJu8s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/meetings?type=agent&meeting_id=e5786c5f-ae0d-4a07-81af-ff1b85da2954",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"meetings"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "agent"
+								},
+								{
+									"key": "meeting_id",
+									"value": "e5786c5f-ae0d-4a07-81af-ff1b85da2954"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"agent token retrieved successfully \",\n    \"data\": {\n        \"meeting\": {\n            \"MeetingId\": \"2403a754-44a8-4add-bde8-6614d9312954\"\n        },\n        \"attendee\": {\n            \"ExternalUserId\": \"agent\",\n            \"AttendeeId\": \"2b680e14-9532-980c-3dfe-5d29ccf08b79\",\n            \"JoinToken\": \"MmI2ODBlMTQtOTUzMi05ODBjLTNkZmUtNWQyOWNjZjA4Yjc5OjA3OWJlNjk4LTgyZmMtNDg3MS1hZjBlLWY0ODJhNTNlYmVkYQ\",\n            \"Capabilities\": {\n                \"Audio\": \"SendReceive\",\n                \"Video\": \"SendReceive\",\n                \"Content\": \"SendReceive\"\n            }\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
